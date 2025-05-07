@@ -12,6 +12,11 @@
         <h1>PIEDRA / PAPEL / TIJERA</h1>
     </header>
     <main>
+        <div class="i_mano">
+            <div class="i_piedra"></div>
+            <div class="i_papel"></div>
+            <div class="i_tijera"></div>
+        </div>
         <p>· Introduce aquí tu jugada ·</p>
         <div class="seleccion">
             <select name="opciones" id="mano">
@@ -23,9 +28,18 @@
         </div>
     </main>
     <section>
-        <h4 class="jugadora">Jugadora:</h4>
-        <h4 class="computadora">Computadora:</h4>
-        <h2 class="resultado">...</h2>
+        <div class="resultado">
+            <p class="frase"></p></div>
+            <div class="marcador">
+                <div class="jugadora">
+                    <h5>Jugadora:</h5>
+                    <h4 class="n_jugadora">X</h4>
+                </div>
+                <div class="computadora">
+                    <h5>Computadora:</h5>
+                    <h4 class="n_computadora">X</h4>
+                </div>
+            </div>
     </section>
     <script src="./script.js"></script>
 </body>

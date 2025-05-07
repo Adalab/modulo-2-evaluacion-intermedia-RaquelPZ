@@ -55,14 +55,40 @@ function compararResultados(valorTuJugada, valorSuJugada) {
     return resultadoString;
 }
 
+// Contar puntos en el marcador
+const boxJugadora = document.querySelector(".n_jugadora");
+const boxComputadora = document.querySelector(".n_computadora");
+
+function pintarMarcador(valorTuJugada, valorSuJugada) {
+    let puntoJugadora = 0;
+    let puntoComputadora = 0;
+    if (valorTuJugada === 1 && valorSuJugada === 3) {
+        puntoJugadora + 1;
+    } else if (valorTuJugada === 2 && valorSuJugada === 1) {
+        puntoJugadora + 1;
+    } else if (valorTuJugada === 3 && valorSuJugada === 2) {
+        puntoJugadora + 1;
+    } else if (valorTuJugada === 1 && valorSuJugada === 2) {
+        puntoComputadora + 1;
+    } else if (valorTuJugada === 2 && valorSuJugada === 3) {
+        puntoComputadora + 1;
+    } else if (valorTuJugada === 3 && valorSuJugada === 1) {
+        puntoComputadora + 1;
+    } 
+    boxJugadora.innerHTML = puntoJugadora;
+    boxComputadora.innerHTML = puntoComputadora;
+}
+
 // Acciona el juego al pulsar click y muestra ambos resultados
 const botonJuego = document.querySelector ("button");
+const boxFrase = document.querySelector (".frase");
 botonJuego.addEventListener ("click", (ev) => {
-    console.log("Nueva jugada");
+    console.log("NUEVA JUGADA");
     let valorTuJugada = guardarTuJugada();
     console.log(valorTuJugada);
     let valorSuJugada = guardarSuJugada();
     console.log(valorSuJugada);
     let resultado = compararResultados(valorTuJugada, valorSuJugada);
-    console.log(resultado);
+    boxFrase.innerHTML = resultado;
+    pintarMarcador();
 });

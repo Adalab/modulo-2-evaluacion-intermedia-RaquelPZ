@@ -18,14 +18,24 @@ header {
     align-items: center;
     justify-content: center;
     line-height: 0.1;
-    margin: 25px;
+    margin-top: 25px;
     letter-spacing: 2px;
 }
-
     h3 {
         color: rgb(19, 138, 132);
         letter-spacing: 15px;
         font-weight: bold;
+    }
+    .i_mano{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .i_piedra, .i_papel, .i_tijera {
+        background-color: rgb(29, 137, 128);
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
     }
 
 main {
@@ -33,7 +43,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px;
+    margin: 25px;
+    gap: 20px;
     color: aliceblue;
 }
     select {
@@ -45,8 +56,9 @@ main {
 
     button {
         background-color: aquamarine;
-        margin: 10px;
-        padding: 12px;
+        padding-block: 8px;
+        padding-inline: 15px;
+        margin-inline: 12px;
         border-radius: 25px;
         font-weight: bold;
     }
@@ -54,8 +66,41 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    line-height: 0.1;
-    margin-right: 50px;
-    margin-block: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
+    .resultado {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        background-color: rgb(59, 59, 59);
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 12px;
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;  
+    }
+    .frase{
+        text-transform: uppercase;
+    }
+    .marcador {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        line-height: 0.01;
+        gap: 15px;
+        /* margin-right: 50px; */
+    }
+    .jugadora, .computadora {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aquamarine;
+        color: black;
+        width: 140px;
+        height: 40px;
+        border-radius: 5px;
+    }
