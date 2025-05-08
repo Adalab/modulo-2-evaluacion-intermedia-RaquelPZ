@@ -94,6 +94,23 @@ function pararJuego(puntoComputadora, puntoJugadora){
     }
 }
 
+// Muestra la imagen de la eleccion de la computadora
+const compuPiedra = document.querySelector(".i_piedra");
+const compuPapel = document.querySelector(".i_papel");
+const compuTijera = document.querySelector(".i_tijera");
+function mostrarImagen(valorSuJugada){
+    compuPiedra.classList.remove("i_i");
+    compuPapel.classList.remove("i_i");
+    compuTijera.classList.remove("i_i");
+    if (valorSuJugada === 1) {
+        compuPiedra.classList.add("i_i");
+    } else if (valorSuJugada === 2) {
+        compuPapel.classList.add("i_i");
+    } else if (valorSuJugada === 3) {
+        compuTijera.classList.add("i_i");
+    }
+}
+
 // Acciona el juego al pulsar click y muestra ambos resultados
 const botonJuego = document.querySelector ("button");
 const boxFrase = document.querySelector (".frase");
@@ -107,4 +124,5 @@ botonJuego.addEventListener ("click", (ev) => {
     boxFrase.innerHTML = resultado;
     pintarMarcador(valorTuJugada, valorSuJugada);
     pararJuego (puntoComputadora, puntoJugadora);
+    mostrarImagen (valorSuJugada);
 });

@@ -42,11 +42,11 @@ header {
     }
     .i_i {
         background-image: url('./i_pi.svg');
+        background-color: rgb(59, 59, 59);
         background-size: cover;
         background-position: center;
         width: 100px;
         height: 100px;
-        /* opacity: 50%; */
     }
 
 main {
@@ -121,6 +121,13 @@ section {
     .chao {
         background-color: rgb(59, 59, 59);
         color: rgb(137, 137, 137);
+    }
+    input {
+        padding: 6px;
+        width: 100px;
+        background-color: rgb(29, 137, 128);
+        color: black;
+        font-weight: bold;
     }
 
 footer {
