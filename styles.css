@@ -40,13 +40,35 @@ header {
         height: 100px;
         border-radius: 50px;
     }
-    .i_i {
-        background-image: url('./i_pi.svg');
+    .ii_piedra {
+        background-image: url('./public/i_pi.svg');
+        color: aliceblue;
         background-color: rgb(59, 59, 59);
         background-size: cover;
         background-position: center;
         width: 100px;
         height: 100px;
+        transition: 0.25s;
+    }
+    .ii_papel {
+        background-image: url('./public/i_pa.svg');
+        color: aliceblue;
+        background-color: rgb(59, 59, 59);
+        background-size: cover;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        transition: 0.25s;
+    }
+    .ii_tijera {
+        background-image: url('./public/i_ti.svg');
+        color: aliceblue;
+        background-color: rgb(59, 59, 59);
+        background-size: cover;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        transition: 0.25s;
     }
 
 main {
@@ -65,7 +87,7 @@ main {
         font-weight: bold;
     }
 
-    button {
+    .btn_jugar {
         background-color: aquamarine;
         padding-block: 8px;
         padding-inline: 15px;
@@ -124,7 +146,7 @@ section {
     }
     input {
         padding: 6px;
-        width: 100px;
+        width: 85px;
         background-color: rgb(29, 137, 128);
         color: black;
         font-weight: bold;
@@ -144,3 +166,40 @@ footer {
     background-color: rgb(29, 137, 128);
     color: rgb(255, 255, 255);
 }
+
+.extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    color: aliceblue;
+}
+    .btn_ok {
+        background-color: rgb(29, 137, 128);
+        color: aliceblue;
+        width: 32px;
+        height: 32px;
+        border-radius: 25px;
+    }
+    .btn_reset {
+        background-color: rgb(184, 9, 65);
+        color: aliceblue;
+        width: 35px;
+        height: 35px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+
+    @media (max-width: 450px) {
+        h1 {
+            font-size: 21px;
+        }
+            h3 {
+                font-size: 10px;
+        }
+        .i_piedra, .i_papel, .i_tijera {
+            width: 90px;
+            height: 90px;
+      }
+    }

@@ -60,6 +60,8 @@ const boxJugadora = document.querySelector(".n_jugadora");
 const boxComputadora = document.querySelector(".n_computadora");
 let puntoJugadora = 0;
 let puntoComputadora = 0;
+    boxJugadora.innerHTML = puntoJugadora;
+    boxComputadora.innerHTML = puntoComputadora;
 function pintarMarcador(valorTuJugada, valorSuJugada) {
     if (valorTuJugada === 1 && valorSuJugada === 3) {
         puntoJugadora = puntoJugadora + 1;
@@ -99,15 +101,15 @@ const compuPiedra = document.querySelector(".i_piedra");
 const compuPapel = document.querySelector(".i_papel");
 const compuTijera = document.querySelector(".i_tijera");
 function mostrarImagen(valorSuJugada){
-    compuPiedra.classList.remove("i_i");
-    compuPapel.classList.remove("i_i");
-    compuTijera.classList.remove("i_i");
+    compuPiedra.classList.remove("ii_piedra");
+    compuPapel.classList.remove("ii_papel");
+    compuTijera.classList.remove("ii_tijera");
     if (valorSuJugada === 1) {
-        compuPiedra.classList.add("i_i");
+        compuPiedra.classList.add("ii_piedra");
     } else if (valorSuJugada === 2) {
-        compuPapel.classList.add("i_i");
+        compuPapel.classList.add("ii_papel");
     } else if (valorSuJugada === 3) {
-        compuTijera.classList.add("i_i");
+        compuTijera.classList.add("ii_tijera");
     }
 }
 
@@ -126,3 +128,30 @@ botonJuego.addEventListener ("click", (ev) => {
     pararJuego (puntoComputadora, puntoJugadora);
     mostrarImagen (valorSuJugada);
 });
+
+//Aciona el reseteado de los puntos para comenzar
+const botonReset = document.querySelector (".btn_reset");
+botonReset.addEventListener ("click", () => {
+    boxFrase.innerHTML = "¡Comencemos!";
+    puntoJugadora = 0;
+    puntoComputadora = 0;
+    boxJugadora.innerHTML = puntoJugadora;
+    boxComputadora.innerHTML = puntoComputadora;
+    boxMaxJugadora.classList.remove("chao");
+    boxMaxComputadora.classList.remove("chao");
+    tuMano.disabled = false;
+    botonJuego.disabled = false;
+    compuPiedra.classList.remove("ii_piedra");
+    compuPapel.classList.remove("ii_papel");
+    compuTijera.classList.remove("ii_tijera");
+});
+
+// //Posibilidad de poner tu nombre de jugadora
+// const boxNombre = document.querySelector (".name_jugadora");
+// const botonNombre = document.querySelector (".btn_ok");
+// const escribeNombre = document.querySelector (".tu_nombre");
+// botonNombre.addEventListener ("click", () => {
+//     boxFrase.innerHTML = "nombre";
+//     boxNombre.innerHTML = escribeNombre.value;
+//     boxNombre = escribeNombre.value;
+// });

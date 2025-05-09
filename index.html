@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/i_pi.svg" />
+    <link rel="icon" href="./public/i_pi.svg" />
     <title>✂</title>
 </head>
 <body>
@@ -14,9 +14,9 @@
     </header>
     <main>
         <div class="i_mano">
-            <div class="i_piedra">piedra</div>
-            <div class="i_papel">papel</div>
-            <div class="i_tijera">tijera</div>
+            <div class="i_piedra"></div>
+            <div class="i_papel"></div>
+            <div class="i_tijera"></div>
         </div>
         <p>· Introduce aquí tu jugada ·</p>
         <div class="seleccion">
@@ -25,7 +25,8 @@
                 <option value="papel">Papel</option>
                 <option value="tijera">✂</option>
             </select>
-            <button>Jugar</button>
+            <button class="btn_jugar">Jugar</button>
+            <button class="btn_reset">⭯</button>
         </div>
     </main>
     <section>
@@ -33,7 +34,7 @@
             <p class="frase"></p></div>
             <div class="marcador">
                 <div class="jugadora">
-                    <h5>Jugadora: </h5>
+                    <h5 class="name_jugadora">Jugadora: </h5>
                     <h4 class="n_jugadora"></h4>
                 </div>
                 <div class="computadora">
@@ -42,7 +43,13 @@
                 </div>
             </div>
         </div>
-        <input id="tu_nombre" type="text" maxlength="10" placeholder="Tu nombre">    
+        <!-- <div class="extra">
+            <p>· Introduce aquí tu nombre ·</p>
+            <div>
+                <input id="tu_nombre" type="text" maxlength="11" placeholder="Tu nombre">
+                <button class="btn_ok">✔</button>
+            </div>
+        </div> -->
     </section>
     <footer>
         ra.d.cheel
