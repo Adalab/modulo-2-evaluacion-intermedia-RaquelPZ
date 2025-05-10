@@ -143,7 +143,7 @@ botonReset.addEventListener ("click", () => {
     botonJuego.disabled = false;
     compuPiedra.classList.remove("ii_piedra");
     compuPapel.classList.remove("ii_papel");
-    compuTijera.classList.remove("i_tijera");
+    compuTijera.classList.remove("ii_tijera");
 });
 
 // //Posibilidad de poner tu nombre de jugadora
