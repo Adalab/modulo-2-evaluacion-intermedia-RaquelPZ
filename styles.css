@@ -35,7 +35,7 @@ header {
     }
     
     .i_piedra, .i_papel, .i_tijera {
-        background-color: rgb(29, 137, 128);
+        background-color: rgb(59, 59, 59);
         width: 100px;
         height: 100px;
         border-radius: 50px;
@@ -43,7 +43,7 @@ header {
     .ii_piedra {
         background-image: url('./public/i_pi.svg');
         color: aliceblue;
-        background-color: rgb(59, 59, 59);
+        background-color: rgb(29, 137, 128);
         background-size: cover;
         background-position: center;
         width: 100px;
@@ -53,8 +53,7 @@ header {
     .ii_papel {
         background-image: url('./public/i_pa.svg');
         color: aliceblue;
-        background-color: rgb(59, 59, 59);
-        background-size: cover;
+        background-color: rgb(29, 137, 128);        background-size: cover;
         background-position: center;
         width: 100px;
         height: 100px;
@@ -63,7 +62,36 @@ header {
     .ii_tijera {
         background-image: url('./public/i_ti.svg');
         color: aliceblue;
-        background-color: rgb(59, 59, 59);
+        background-color: rgb(29, 137, 128);
+        background-size: cover;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        transition: 0.25s;
+    }
+    .iix_piedra {
+        background-image: url('./public/i_pi.svg');
+        color: aliceblue;
+        background-color: rgb(184, 9, 65);
+        background-size: cover;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        transition: 0.25s;
+    }
+    .iix_papel {
+        background-image: url('./public/i_pa.svg');
+        color: aliceblue;
+        background-color: rgb(184, 9, 65);       background-size: cover;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        transition: 0.25s;
+    }
+    .iix_tijera {
+        background-image: url('./public/i_ti.svg');
+        color: aliceblue;
+        background-color: rgb(184, 9, 65);
         background-size: cover;
         background-position: center;
         width: 100px;
@@ -125,7 +153,6 @@ section {
         align-items: end;
         line-height: 0.01;
         gap: 18px;
-        /* margin-right: 50px; */
     }
     .jugadora, .computadora {
         display: flex;
